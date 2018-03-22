@@ -61,6 +61,11 @@ class StockController extends Controller
     public function decrementOne(Request $request)
     {
         Stock::findOrFail($request->id)->decrement('amount');
-        return redirect('/stock');
+        if('amount' <= 0) {
+            return redirect('/stock');
+        } else {
+            Stock::destroy($request->id);
+            return redirect('/stock');
+        }
     }
 }

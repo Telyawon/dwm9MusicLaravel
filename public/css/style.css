@@ -1,3 +1,6 @@
+html {
+    background-image: url("./img/background.jpg");
+}
 html, body {
     padding: 0;
     margin: 0;
@@ -5,6 +8,8 @@ html, body {
 body {
     height: 100%;
     padding-bottom: 30px;
+    font-family: fantasy;
+    color: black;
 }
 nav {
     display: flex;
@@ -31,7 +36,7 @@ nav > ul > li > a {
 }
 nav > ul > li > a:hover {
     color: white;
-    background-color: lightgray;
+    background-color: #FFA27F;
     border: solid 3px black;
 }
 main {
@@ -42,8 +47,19 @@ main {
     justify-content: center;
     align-items: center;
 }
+h1 {
+    font-family: cursive;
+    color: lightgray;
+    font-style: italic;
+}
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: lightgray;
+    font-style: italic;
+}
 table, th, td {
-    border: solid 1px black;
+    background-color: lightblue;
+    border: solid 1px gray;
     text-align: center;
     padding: 4px;
 }
@@ -52,11 +68,13 @@ table {
     width: 100%;
 }
 th {
-    height: 30px;
+    height: 50px;
+    font-size: 20px;
 }
 form {
     width: 100%;
     text-align: center;
+    color: lightgray;
 }
 form > input {
     width: 100%;
@@ -67,9 +85,11 @@ form > input {
 form > input[type=text], form > input[type=number] {
     border: none;
     border-bottom: 2px solid lightblue;
+    background: none;
 }
 form > input[type=text]:focus, form > input[type=number]:focus {
     outline: none;
+    color: lightgray;
 }
 input[type=submit] {
     width: 50%;
