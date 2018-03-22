@@ -11,7 +11,7 @@
    {{Form::text('name', $stock->name)}}
 
    {{Form::label('Description : ')}}
-   {{Form::textarea('description', $stock->description)}}
+   {{Form::text('description', $stock->description)}}
 
    {{Form::label('Price : ')}}
    {{Form::text('price', $stock->price)}}
@@ -22,3 +22,4 @@
    {{Form::submit('Submit')}}
 {!! Form::close() !!}
 
+@endsection
