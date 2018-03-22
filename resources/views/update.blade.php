@@ -1,7 +1,8 @@
 @extends('layouts.layout')
+@section('title', 'Update a product')
 @section('content')
 
-<h1>Update some products</h1>
+<h1>Update a product</h1>
 
 {!! Form::open(array('url' => '/update', 'method' => 'post')) !!}
    {{ Form::hidden('id', $stock->id) }}
@@ -20,3 +21,4 @@
 
    {{Form::submit('Submit')}}
 {!! Form::close() !!}
+

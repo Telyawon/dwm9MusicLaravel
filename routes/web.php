@@ -22,4 +22,5 @@ Route::post('/edit', 'StockController@edit');
 Route::post('/update', 'StockController@updateOne');
 Route::post('/stock', 'StockController@inserted');
 Route::post('/delete', 'StockController@deleteOne');
-
+Route::post('/increment', 'StockController@incrementOne');
+Route::post('/decrement', 'StockController@decrementOne');

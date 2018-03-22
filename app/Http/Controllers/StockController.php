@@ -51,4 +51,16 @@ class StockController extends Controller
         $stock = Stock::destroy($request->id);
         return redirect('/stock');
     }
+
+    public function incrementOne(Request $request)
+    {
+        Stock::findOrFail($request->id)->increment('amount');
+        return redirect('/stock');
+    }
+
+    public function decrementOne(Request $request)
+    {
+        Stock::findOrFail($request->id)->decrement('amount');
+        return redirect('/stock');
+    }
 }

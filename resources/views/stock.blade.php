@@ -1,4 +1,5 @@
 @extends('layouts.layout')
+@section('title', 'Our products')
 @section('content')
 
 <h1>Products list</h1>
@@ -10,7 +11,9 @@
         <th>Price</th>
         <th>Amount</th>
         <th>Update</th>
-        <th>Delete</th>
+        <th>Delete Row</th>
+        <th>Increase</th>
+        <th>Decrease</th>
     </tr>
 
     @foreach($stocks as $stock)
@@ -29,6 +32,18 @@
         {!! Form::open(['url' => '/delete']) !!}
             {{ Form::hidden('id', $stock->id) }}
             {!! Form::submit('X') !!}
+        {!! Form::close() !!}
+        </td>
+        <td>
+        {!! Form::open(['url' => '/increment']) !!}
+            {{ Form::hidden('id', $stock->id) }}
+            {!! Form::submit('+') !!}
+        {!! Form::close() !!}
+        </td>
+        <td>
+        {!! Form::open(['url' => '/decrement']) !!}
+            {{ Form::hidden('id', $stock->id) }}
+            {!! Form::submit('-') !!}
         {!! Form::close() !!}
         </td>
     </tr>

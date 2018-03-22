@@ -1,7 +1,8 @@
 @extends('layouts.layout')
+@section('title', 'Insert a product')
 @section('content')
 
-<h1>Insert some products</h1>
+<h1>Insert a product</h1>
 
 {!! Form::open(array('url' => '/stock')) !!}
     {{ Form::label('Name : ') }}
