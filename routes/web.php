@@ -17,5 +17,8 @@ Route::get('/', function () {
 
 Route::get('/insertStock', 'StockController@insertOne');
 Route::get('/stock', 'StockController@show');
+
+Route::post('/edit', 'StockController@edit');
+Route::post('/update', 'StockController@updateOne');
 Route::post('/stock', 'StockController@inserted');
 

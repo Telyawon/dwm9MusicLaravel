@@ -18,9 +18,20 @@ class StockController extends Controller
         return view('/insertStock');
     }
 
+    public function updateOne(Request $request)
+    {
+        $stock = Stock::findOrFail($request->id);
+        $stock->name = $request->name;
+        $stock->description = $request->description;
+        $stock->price = $request->price;
+        $stock->amount = $request->amount;
+        $stock->save();
+        return redirect('/stock');
+    }
+ 
     public function edit(Request $request)
     {
-        $offre = Stock::findOrFail($request->id);
+        $stock = Stock::findOrFail($request->id);
         return view('/update', ['stock' => $stock]);
     }
  
