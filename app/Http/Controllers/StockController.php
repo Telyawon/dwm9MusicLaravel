@@ -46,4 +46,9 @@ class StockController extends Controller
         return redirect('/stock');
     }
    
+    public function deleteOne(Request $request)
+    {
+        $stock = Stock::destroy($request->id);
+        return redirect('/stock');
+    }
 }
