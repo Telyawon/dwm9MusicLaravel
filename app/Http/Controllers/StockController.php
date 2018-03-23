@@ -10,6 +10,9 @@ class StockController extends Controller
     public function show()
     {
         $stocks = Stock::all();
+        $stocks = DB::table('stocks')
+                ->orderBy('name', 'desc')
+                ->get();
         return view('stock', ['stocks' => $stocks]);
     }
 
@@ -61,7 +64,7 @@ class StockController extends Controller
     public function decrementOne(Request $request)
     {
         Stock::findOrFail($request->id)->decrement('amount');
-        if('amount' <= 0) {
+        if('amount' >= 0) {
             return redirect('/stock');
         } else {
             Stock::destroy($request->id);

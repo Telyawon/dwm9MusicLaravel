@@ -12,8 +12,8 @@
             <th>Amount</th>
             <th>Update</th>
             <th>Delete Row</th>
-            <th>Increase</th>
-            <th>Decrease</th>
+            <th>Sell one</th>
+            <th>Buy one</th>
         </tr>
 
         @foreach($stocks as $stock)
