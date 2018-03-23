@@ -8,6 +8,8 @@ Comme précisé, le site est responsive et permet son utilisation aussi bien sur
 
 Le CRUD est fonctionnel et permet également de simuler la récupération d'un article (Buy One) ou la mise à disposition d'un article (Sell One). Pour l'heure, les fonctions d'incrémentation et de décrémentation ont été mises en place, mais ne permettent pas de supprimer automatiquement un article lorsque sa quantité arrive à 0. Les produits sont également triés automatiquement par ordre alphabétique selon leur nom.
 
+Une amélioration possible (mais non réalisée par manque de temps) serait de créer plusieurs tableaux selon une catégorie d'objets (CD, goodies, vêtements, ...), via une page dédiée ou un menu déroulant dans le formulaire d'insertion pour chaque catégorie et d'afficher la totalité des produits sur la page des produits en offrant la possibilité de les classer et de les afficher par catégories. 
+
 Malheureusement, ce site ne dispose pas de tables intermédiaires ni de relations "many-to-many" pour la simple et bonne raison que son auteur est encore un peu trop faible sur ces points-ci (malgré de nombreux essais), et a préféré fournir un projet fonctionnel (bien que basique) et avec un front plus travaillé. J'en appelle donc à votre bienveillance et à votre compréhension quand à ce délicat sujet que sont les tables intermédiaires.
 
 Chers formateurs, j'espère que vous vous plairez à regarder et à corriger ce site réalisé avec amour !
@@ -16,7 +18,7 @@ Amusez-vous bien !
 
 Clément FAIDUTTI
 
-**************************************************************************************************************
+*************************************************************************************
 
 Hello and welcome to my final project done with the DWM9 class.
 
@@ -27,8 +29,10 @@ His running is really easy : A simple home page, and some inputs in the NavBar t
 As said before, the site is responsive and allows to be seen as well on computers than on tablets and / or smartphones. The table in the "All Products" page has an overflow that allows scrolling directly in it when the screen-size doesn't give the full size of the table.
 
 The CRUD is operational and can simulate the recovery of a product (Buy One) or the provision of a product (Sell One). For now, the incrementation and decrementation functions are available, but don't allow to delete directly a product when its amount goes to 0. Products are also sorted by alphabetical order in function of their name.
+ 
+A potential upgrade (which has not been done due to lack of time) would be to create many tables with an object category (CD, goodies, clothes, ...), via a dedicated page or a drop down menu in the insert (and update) form for each category and to show every products on the "All products" page with the possibility to sort them and to show them by category.
 
-Unfortunately, this site doesn't have any pivot tables nor many-to-many relationships for the only reason that his author is still really weak on these things (despite many trials), and prefered to give a functional project (even if it's basical) and with a more elaborate front. Please kindly be indulgent and understanding on this picky point that are pivot tables.
+Unfortunately, this site doesn't have any pivot tables nor many-to-many relationships for the only reason that his author is still really weak on these things (despite many trials), and prefered to give a functional project (even if it's basical) and with a more elaborate front. Please kindly be indulgent and understanding on this tricky thing that are pivot tables.
 
 Dear trainers, I really hope that you will like to watch and correct this site made with many love !
 

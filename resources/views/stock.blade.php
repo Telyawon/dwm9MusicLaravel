@@ -8,7 +8,7 @@
         <tr>
             <th>Name</th>
             <th>Description</th>
-            <th>Price</th>
+            <th>Price ($)</th>
             <th>Amount</th>
             <th>Update</th>
             <th>Delete Row</th>
@@ -22,24 +22,32 @@
             <td>{{ $stock->description }}</td>
             <td>{{ $stock->price }}</td>
             <td>{{ $stock->amount }}</td>
+
+            {{--  Update button  --}}
             <td>
             {!! Form::open(array('url' => '/edit', 'method' => 'post')) !!}
                 {{ Form::hidden('id', $stock->id) }}
                 {!! Form::submit('U') !!}
             {!! Form::close() !!}
             </td>
+
+            {{--  Delete button  --}}
             <td>
             {!! Form::open(['url' => '/delete']) !!}
                 {{ Form::hidden('id', $stock->id) }}
                 {!! Form::submit('X') !!}
             {!! Form::close() !!}
             </td>
+
+            {{--  Sell One button  --}}
             <td>
             {!! Form::open(['url' => '/increment']) !!}
                 {{ Form::hidden('id', $stock->id) }}
                 {!! Form::submit('+') !!}
             {!! Form::close() !!}
             </td>
+
+            {{--  Buy One button  --}}
             <td>
             {!! Form::open(['url' => '/decrement']) !!}
                 {{ Form::hidden('id', $stock->id) }}
@@ -48,7 +56,6 @@
             </td>
         </tr>
         @endforeach
-
     </table>
 </div>
 @endsection

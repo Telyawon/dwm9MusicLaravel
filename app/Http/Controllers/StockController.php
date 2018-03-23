@@ -9,7 +9,7 @@ class StockController extends Controller
 {
     public function show()
     {
-        $stocks = Stock::orderBy('name')->get(); // Sort by alphabetical order on the name
+        $stocks = Stock::orderBy('name')->get(); // Sort by alphabetical order on the name with orderBy
         return view('stock', ['stocks' => $stocks]);
     }
 
@@ -52,12 +52,14 @@ class StockController extends Controller
         return redirect('/stock');
     }
 
-    public function incrementOne(Request $request)
+    // Increment the chosen row's amount by one on click
+    public function incrementOne(Request $request) 
     {
         Stock::findOrFail($request->id)->increment('amount');
         return redirect('/stock');
     }
 
+    // Decrement the chosen row's amount by one on click
     public function decrementOne(Request $request)
     {
         Stock::findOrFail($request->id)->decrement('amount');
