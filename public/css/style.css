@@ -1,5 +1,6 @@
 html {
     background-image: url("./img/background.jpg");
+    background-size: cover;
 }
 html, body {
     padding: 0;
@@ -101,8 +102,11 @@ form > input[type=text]:focus, form > input[type=number]:focus {
     color: white;
 }
 input[type=submit] {
-    width: 50%;
-    height: 30px;
+    width: 90%;
+    border-radius: 50%;
+    border: 5px solid lightblue;
+    font-weight: bold;
+    font-size: 17px;
 }
 footer {
     display: flex;

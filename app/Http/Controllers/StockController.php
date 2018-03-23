@@ -9,10 +9,7 @@ class StockController extends Controller
 {
     public function show()
     {
-        $stocks = Stock::all();
-        $stocks = DB::table('stocks')
-                ->orderBy('name', 'desc')
-                ->get();
+        $stocks = Stock::orderBy('name')->get(); // Sort by alphabetical order on the name
         return view('stock', ['stocks' => $stocks]);
     }
 
